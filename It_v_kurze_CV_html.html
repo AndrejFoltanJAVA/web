@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrej Foltán - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,6 +74,37 @@
         }
         .stars {
             color: #f39c12;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hobby {
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s ease;
+        }
+        .hobby img {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            animation: float 3s infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .hobby:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -155,11 +187,32 @@
 
             <div class="section">
                 <h2>Hobbies</h2>
-                <ul>
-                    <li>Sports (Running, Cycling, Table Tennis)</li>
-                    <li>Playing the Guitar</li>
-                    <li>Cooking and Nature Exploration</li>
-                </ul>
+                <div class="hobbies">
+                    <div class="hobby">
+                        <img src="https://via.placeholder.com/120?text=Running" alt="Running">
+                        <p>Running</p>
+                    </div>
+                    <div class="hobby">
+                        <img src="https://via.placeholder.com/120?text=Cycling" alt="Cycling">
+                        <p>Cycling</p>
+                    </div>
+                    <div class="hobby">
+                        <img src="https://via.placeholder.com/120?text=Table+Tennis" alt="Table Tennis">
+                        <p>Table Tennis</p>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-guitar" style="font-size: 40px; color: #f39c12;"></i>
+                        <p>Guitar</p>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-utensils" style="font-size: 40px; color: #f39c12;"></i>
+                        <p>Cooking</p>
+                    </div>
+                    <div class="hobby">
+                        <i class="fas fa-tree" style="font-size: 40px; color: #f39c12;"></i>
+                        <p>Nature</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
