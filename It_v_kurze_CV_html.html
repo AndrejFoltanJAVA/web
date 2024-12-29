@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,14 @@
         .skills-section h2 {
             color: #f39c12;
             font-size: 22px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .skills-levels {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: right;
+            color: #555;
+            margin-right: 1px;
         }
         .skills-grid {
             display: grid;
@@ -74,26 +81,31 @@
         }
         .stars {
             color: #f39c12;
+            margin-left: auto;
         }
         .section {
             margin-bottom: 30px;
         }
         .hobbies {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            justify-content: center;
+            align-items: center;
         }
         .hobby {
             text-align: center;
             width: 150px;
             transition: transform 0.3s ease;
         }
-        .hobby img {
-            width: 120px;
-            height: 120px;
-            border-radius: 12px;
-            margin-bottom: 10px;
+        .hobby.moving i {
+            font-size: 80px;
+            color: #f39c12;
             animation: float 3s infinite;
+        }
+        .hobby i {
+            font-size: 80px;
+            color: #f39c12;
         }
         @keyframes float {
             0%, 100% {
@@ -103,7 +115,7 @@
                 transform: translateY(-10px);
             }
         }
-        .hobby:hover {
+        .hobby.moving:hover {
             transform: scale(1.1);
         }
     </style>
@@ -118,31 +130,37 @@
 
             <div class="skills-section">
                 <h2>Skills</h2>
+                <div class="skills-levels">
+                    <span>* Beginner</span> &nbsp;|&nbsp; <span>***** Expert</span>
+                </div>
                 <div class="skills-grid">
                     <div class="skill">
                         <span class="label">Java</span>
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+					 <div class="skill">
+                        <span class="label">Spring Framework</span>
+                        <div class="stars">★★★☆☆</div>
+                    </div>
+					 <div class="skill">
+                        <span class="label">Microservices</span>
+                        <div class="stars">★★☆☆☆</div>
+                    </div>
+					<div class="skill">
+                        <span class="label">SQL</span>
+                        <div class="stars">★★★★☆</div>
                     </div>
                     <div class="skill">
                         <span class="label">PL/SQL</span>
                         <div class="stars">★★★★☆</div>
                     </div>
-                    <div class="skill">
-                        <span class="label">Microservices</span>
-                        <div class="stars">★★★☆☆</div>
-                    </div>
+                  
                     <div class="skill">
                         <span class="label">HTML & CSS</span>
                         <div class="stars">★★★★☆</div>
                     </div>
-                    <div class="skill">
-                        <span class="label">Spring Framework</span>
-                        <div class="stars">★★★★☆</div>
-                    </div>
-                    <div class="skill">
-                        <span class="label">SQL</span>
-                        <div class="stars">★★★★☆</div>
-                    </div>
+                   
+                    
                     <div class="skill">
                         <span class="label">Microsoft Office</span>
                         <div class="stars">★★★★★</div>
@@ -154,18 +172,18 @@
         <div class="content">
             <div class="section">
                 <h2>Profile</h2>
-                <p>Experienced IT professional with a strong background in Java development, data analysis, and operational tasks. Skilled in solving complex problems using Java, PL/SQL, and other technologies, with experience working across multiple industries and international teams.</p>
+                <p>Experienced IT employee and fan of modern IT technologies with a background in Java development, data analysis, and operational tasks. Skilled in solving complex problems using Java, PL/SQL, and other technologies, with experience working across multiple industries and international teams.</p>
             </div>
 
             <div class="section">
                 <h2>Experience</h2>
                 <ul>
-                    <li><strong>SPIN SK</strong> (Nov 2023 - Present): Java Developer<br>Developing Java projects, Android applications, and managing operational tasks.</li>
+                    <li><strong>SPIN</strong> (Nov 2023 - Present): Java Developer<br>Developing Java projects, Android applications, and managing operational tasks.</li>
                     <li><strong>UNIPHARMA</strong> (Aug 2023 - Jul 2024): IT Officer<br>Responsible for Java projects, PL/SQL programming, and maintaining software infrastructure.</li>
                     <li><strong>KOOPERATIVA</strong> (Jun 2023 - Jul 2023): Bancassurance Analyst<br>Data analysis and reporting for bancassurance products.</li>
-                    <li><strong>Trexima Bratislava</strong> (Jan 2022 - Dec 2022): Data Analyst<br>Created and automated labor market publications in Slovakia.</li>
-                    <li><strong>Ledvance</strong> (May 2019 - Dec 2021): Product Support Specialist<br>Managed data preparation and imports for EU partners, developed VBA macros, and created XML e-catalogues.</li>
-                    <li><strong>ContiTech</strong> (Nov 2017 - Apr 2019): Warranty Technician<br>Analyzed product warranty claims and liaised with production teams.</li>
+                    <li><strong>Trexima Bratislava</strong> (Jan 2022 - Dec 2022): Data Analyst<br>Creation of labor market publications in Slovakia and automation of tasks using VBA and Python.</li>
+                    <li><strong>Ledvance</strong> (May 2019 - Dec 2021): Product Support Specialist<br>Development of XML product e-catalogues, synchronization of product data, execution of data exports, and modification of VBA macros.</li>
+                    <li><strong>ContiTech</strong> (Nov 2017 - Apr 2019): Warranty Technician<br>Analysis of warranty claims for automotive parts, collaboration with the laboratory, and processing warranty reports.</li>
                 </ul>
             </div>
 
@@ -174,6 +192,16 @@
                 <ul>
                     <li>SPU Nitra, Faculty of Economics and Management (2011 - 2016): Quantitative Methods in Economics</li>
                     <li>Grammar School Nováky (2006 - 2010): Specialization in Informatics</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Certified Programming Courses</h2>
+                <ul>
+                    <li>IT v kurze: Java Developer Junior (September 2024 – 2025)</li>
+					<li>Udemy.com: Java Programming Masterclass for Software Developers (April 2021)</li>
+                    <li>LinkedIn Learning: Java EE 8 Essential Training (February 2021)</li>
+                    <li>learn2code: Advanced Java (December 2019)</li>
                 </ul>
             </div>
 
@@ -188,28 +216,30 @@
             <div class="section">
                 <h2>Hobbies</h2>
                 <div class="hobbies">
-                    <div class="hobby">
-                        <img src="https://via.placeholder.com/120?text=Running" alt="Running">
+                    <div class="hobby moving">
+                        <i class="fas fa-running"></i>
                         <p>Running</p>
                     </div>
-                    <div class="hobby">
-                        <img src="https://via.placeholder.com/120?text=Cycling" alt="Cycling">
+                    <div class="hobby moving">
+                        <i class="fas fa-biking"></i>
                         <p>Cycling</p>
                     </div>
-                    <div class="hobby">
-                        <img src="https://via.placeholder.com/120?text=Table+Tennis" alt="Table Tennis">
+                    <div class="hobby moving">
+                        <i class="fas fa-table-tennis"></i>
                         <p>Table Tennis</p>
                     </div>
+					<div>
+					</div>
                     <div class="hobby">
-                        <i class="fas fa-guitar" style="font-size: 40px; color: #f39c12;"></i>
+                        <i class="fas fa-guitar"></i>
                         <p>Guitar</p>
                     </div>
                     <div class="hobby">
-                        <i class="fas fa-utensils" style="font-size: 40px; color: #f39c12;"></i>
+                        <i class="fas fa-utensils"></i>
                         <p>Cooking</p>
                     </div>
                     <div class="hobby">
-                        <i class="fas fa-tree" style="font-size: 40px; color: #f39c12;"></i>
+                        <i class="fas fa-tree"></i>
                         <p>Nature</p>
                     </div>
                 </div>
@@ -218,3 +248,4 @@
     </div>
 </body>
 </html>
+
